@@ -6,6 +6,7 @@ from decode_captcha import decode
 import signal
 from contextlib import contextmanager
 
+class TimeoutException(Exception): pass
 
 @contextmanager
 def time_limit(seconds):
@@ -19,8 +20,8 @@ def time_limit(seconds):
         signal.alarm(0)
 
 
-USERNAME = "20173749"
-PASSWORD = "164657188"
+USERNAME = ""
+PASSWORD = ""
 URL = "https://dk-sis.hust.edu.vn/Users/Login.aspx"
 
 
