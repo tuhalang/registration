@@ -23,17 +23,24 @@ def time_limit(seconds):
 USERNAME = ""
 PASSWORD = ""
 URL = "https://dk-sis.hust.edu.vn/Users/Login.aspx"
+subjects = ['1234','2345']
+
+PATH_TO_CHROMEDRIVER = "/home/tuhalang/Documents/Python/auto_register/chromedriver"
+
 
 
 def login():
 
     model = load_model()
 
+    # start comment
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
+    driver = webdriver.Chrome(executable_path=PATH_TO_CHROMEDRIVER,chrome_options=options)
+    # end comment
 
-    driver = webdriver.Chrome(
-        executable_path='/home/tuhalang/Documents/Python/auto_register/chromedriver')  # ,chrome_options=options)
+    #driver = webdriver.Chrome(executable_path=PATH_TO_CHROMEDRIVER)
+    
     driver.set_script_timeout(10)
 
     driver.get(URL)
