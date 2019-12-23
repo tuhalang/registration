@@ -6,14 +6,16 @@ from decode_captcha import decode
 import signal
 from contextlib import contextmanager
 from selenium.webdriver.common.keys import Keys
+import os
 
 
 USERNAME = ""
 PASSWORD = ""
 URL = "https://dk-sis.hust.edu.vn/Users/Login.aspx"
-subjects = ['112363','688084','111559','111569','111570']#'111549','689529','111565','689511',
+subjects = []
 
-PATH_TO_CHROMEDRIVER = "/home/tuhalang/Documents/Python/auto_register/chromedriver"
+ROOT = os.getcwd()
+PATH_TO_CHROMEDRIVER = ROOT + "/chromedriver"
 
 
 
