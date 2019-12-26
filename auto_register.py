@@ -23,11 +23,10 @@ def login():
 
     model = load_model()
 
-    # start comment
-    options = webdriver.ChromeOptions()
-    options.add_argument('headless')
+    #options = webdriver.ChromeOptions()
+    #options.add_argument('headless')
     driver = webdriver.Chrome(executable_path=PATH_TO_CHROMEDRIVER)#,chrome_options=options)
-    # end comment
+
 
     #driver = webdriver.Chrome(executable_path=PATH_TO_CHROMEDRIVER)
     
